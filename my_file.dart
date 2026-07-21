@@ -1,17 +1,88 @@
+
+
 void main () {
-  int x = 14 , y= 12 ;
-  if(x>y){
-    print("x is greater than y");
-  }else if (y>x) {
- print  ("y is greater than x " ) ;
-   } else {
-    print ("Are equal") ;
-    
+  for ( int i =1; i <= 20; i++) ;
+  print("i");                         //q1
+List <String> food = ['pizza', 'burger', 'pasta', 'chicken', 'salad'];
+for (int j = 0; j< food .length; j++) {
+  print (food[j]);                   //q2
+}
+  List<int> Numbers = [1,2,3,4,5,6,7,8,9,10];
+  for (int i = 0; i< Numbers.length;  i++) {
+    print(Numbers[i]);                    //q3
+
 
 
   }
-
+int day = 3;
+switch (day) {
+  case 1 : print(" monday");
+  break;
+  case 2 : print ("Tuesday");
+  break ;
+  case 3 : print ("Wednesday");
+  break;
+  case 4 : print ("Thursday");
+  break;
+  case 5 : print ("Friday");
+  break;
+  case 6 : print ("Saturday");
+  break;
+  case 7 :("Sunday");
+  break;
+  default:
+  print("invalid Day");         //q4
+ 
+                                                      
+}
+List <int> numbers = [10, 25 ,7,42,18];
+int biggest = numbers [0];
+for (int number in numbers){
+  if (number>biggest){
+    biggest = number ;
 
   }
+}
+print ("Biggest number : $biggest"); //q5
+  
+
+int counter =1;
+while (counter<=10);{
+print ("Hello");
+counter++;
+}                 //q6
+List<String> students = [ 'Ahmed', 'Mohamed,' 'Fouad' 'Mariam' 'omar'];
+for (int counter = 0; counter < students.length; counter++);
+switch (counter) {
+  case 0:
+  print("first student: ${students[counter]}");
+  break;
+  case 1:
+  print("Second student :${students[counter]}");
+  break;
+  case 2:("Third students:${students[counter]}");
+  break;
+  case 3 :
+  print ("fourth student:${students[counter]}");
+  break;
+  case 4:
+  print("fifth student : ${students[counter]}");
+  break;
+  default:
+  print("student ${counter +1}:${students[counter]}");
+
+
+
+
+}
+
+
+
+}
+
+
+
+
+
 
 
