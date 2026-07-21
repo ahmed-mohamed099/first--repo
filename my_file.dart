@@ -52,33 +52,34 @@ print ("Hello");
 counter++;
 }                 //q6
 List<String> students = [ 'Ahmed', 'Mohamed,' 'Fouad' 'Mariam' 'omar'];
-for (int counter = 0; counter < students.length; counter++);
-switch (counter) {
+for (int i = 0; i < students.length; i++){
+  switch (i) {
   case 0:
-  print("first student: ${students[counter]}");
+  print("first student: ${students[i]}");
   break;
   case 1:
-  print("Second student :${students[counter]}");
+  print("Second student :${students[i]}");
   break;
-  case 2:("Third students:${students[counter]}");
+  case 2:("Third students:${students[i]}");
   break;
   case 3 :
-  print ("fourth student:${students[counter]}");
+  print ("fourth student:${students[i]}");
   break;
   case 4:
-  print("fifth student : ${students[counter]}");
+  print("fifth student : ${students[i]}");
   break;
   default:
-  print("student ${counter +1}:${students[counter]}");
+  print("student ${counter +1}:${students[i]}");            
+}
+
+}
+
 
 
 
 
 }
 
-
-
-}
 
 
 
