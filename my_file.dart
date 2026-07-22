@@ -69,7 +69,7 @@ for (int i = 0; i < students.length; i++){
   print("fifth student : ${students[i]}");
   break;
   default:
-  print("student ${counter +1}:${students[i]}");            
+  print("student ${counter +1}:${students[i]}");             //q7
 }
 
 }
