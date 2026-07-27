@@ -26,7 +26,7 @@ Map<String, int> ages = {
    'laila' : 19,
 
 };
-ages.ForEach((name, age) {
+ages.forEach((name, age) {
     print('$name is $age years old');      //q4
 
 

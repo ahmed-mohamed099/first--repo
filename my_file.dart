@@ -1,89 +1,62 @@
 
-
-void main () {
-  for ( int i =1; i <= 20; i++) ;
-  print("i");                         //q1
-List <String> food = ['pizza', 'burger', 'pasta', 'chicken', 'salad'];
-for (int j = 0; j< food .length; j++) {
-  print (food[j]);                   //q2
-}
-  List<int> Numbers = [1,2,3,4,5,6,7,8,9,10];
-  for (int i = 0; i< Numbers.length;  i++) {
-    print(Numbers[i]);                    //q3
-
-
-
+  double  rectangleArea(double width, double heigth ) {
+    return width* heigth;
   }
-int day = 3;
-switch (day) {
-  case 1 : print(" monday");
-  break;
-  case 2 : print ("Tuesday");
-  break ;
-  case 3 : print ("Wednesday");
-  break;
-  case 4 : print ("Thursday");
-  break;
-  case 5 : print ("Friday");
-  break;
-  case 6 : print ("Saturday");
-  break;
-  case 7 :("Sunday");
-  break;
-  default:
-  print("invalid Day");         //q4
- 
-                                                      
-}
-List <int> numbers = [10, 25 ,7,42,18];
-int biggest = numbers [0];
-for (int number in numbers){
-  if (number>biggest){
-    biggest = number ;
-
-  }
-}
-print ("Biggest number : $biggest"); //q5
+  void main () {
+    double width = 5.0;
+    double heigth = 8.0;
+    double area= rectangleArea(width, heigth);
+    print("Rectangle Area = $area");    //q1         
+  }    
+    
+    bool ispalindrome(String text){
   
+      String cleanText= text.toLowerCase(). replaceAll(" " ,""); 
+      String reversed= cleanText.split("").reversed.join("");
+      return cleanText==reversed; 
+    }
+    
+  
+    void testpalindrome() { //
+      print(ispalindrome("Race car"));  //True
+      print(ispalindrome("man")); //True
+      print(ispalindrome("hello"));  // flase // q2
+    
+    }
+    String buildUserprofile(String name, {int age = 20, String city = 'cairo'}){
+      return "Name: $name, Age, $age , city: $city";
 
-int counter =1;
-while (counter<=10);{
-print ("Hello");
-counter++;
-}                 //q6
-List<String> students = [ 'Ahmed', 'Mohamed,' 'Fouad' 'Mariam' 'omar'];
-for (int i = 0; i < students.length; i++){
-  switch (i) {
-  case 0:
-  print("first student: ${students[i]}");
-  break;
-  case 1:
-  print("Second student :${students[i]}");
-  break;
-  case 2:("Third students:${students[i]}");
-  break;
-  case 3 :
-  print ("fourth student:${students[i]}");
-  break;
-  case 4:
-  print("fifth student : ${students[i]}");
-  break;
-  default:
-  print("student ${counter +1}:${students[i]}");             //q7
+    }
+    void name (){
+      print(buildUserprofile("Ali"));
+      print(buildUserprofile("Ali"));
+
+  print(buildUserprofile("Ahmed", age: 25));
+
+  print(buildUserprofile("omar", age: 22, city: "Alexandria"));
+      
+
+
+    }
+    List<int> filterNumbers(List<int> nums, bool Function(int) test) {
+  List<int> result = [];
+
+  for (int num in nums) {
+    if (test(num)) {
+      result.add(num);
+    }
+  }
+
+  return result;
 }
 
+void nubmers() {
+  List<int> numbers = [5, 8, 12, 15, 20, 3, 18];
+
+  print(filterNumbers(numbers, (num) => num % 2 == 0));
+
+  print(filterNumbers(numbers, (num) => num > 10));
 }
 
-
-
-
-
-}
-
-
-
-
-
-
-
-
+  
+    
