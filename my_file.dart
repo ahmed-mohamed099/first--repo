@@ -1,62 +1,43 @@
 
-  double  rectangleArea(double width, double heigth ) {
-    return width* heigth;
+
+class person {
+  String  Name;
+  int age;
+  String city ;
+  person(this.Name, this. age, this.city);
+  void printInfo(){
+    print("Name:$Name");
+    print("Age:$age");
+    print("city:$city");
+    print("");
+
   }
-  void main () {
-    double width = 5.0;
-    double heigth = 8.0;
-    double area= rectangleArea(width, heigth);
-    print("Rectangle Area = $area");    //q1         
-  }    
-    
-    bool ispalindrome(String text){
-  
-      String cleanText= text.toLowerCase(). replaceAll(" " ,""); 
-      String reversed= cleanText.split("").reversed.join("");
-      return cleanText==reversed; 
-    }
-    
-  
-    void testpalindrome() { //
-      print(ispalindrome("Race car"));  //True
-      print(ispalindrome("man")); //True
-      print(ispalindrome("hello"));  // flase // q2
-    
-    }
-    String buildUserprofile(String name, {int age = 20, String city = 'cairo'}){
-      return "Name: $name, Age, $age , city: $city";
+}
+void main(){
+  person person1= person("Ahmed" , 23, "cairo");
+  person pesron2= person("Mariam" ,22,"Alexandria");
+  person1.printInfo();
+  pesron2.printInfo();                     //q1
 
-    }
-    void name (){
-      print(buildUserprofile("Ali"));
-      print(buildUserprofile("Ali"));
+}
+class Rectangle {
+  double width;
+  double height;
 
-  print(buildUserprofile("Ahmed", age: 25));
+  Rectangle(this.width, this.height);
 
-  print(buildUserprofile("omar", age: 22, city: "Alexandria"));
-      
-
-
-    }
-    List<int> filterNumbers(List<int> nums, bool Function(int) test) {
-  List<int> result = [];
-
-  for (int num in nums) {
-    if (test(num)) {
-      result.add(num);
-    }
+  double area() {
+    return width * height;
   }
 
-  return result;
+  double perimeter() {
+    return 2 * (width + height);
+  }
 }
 
-void nubmers() {
-  List<int> numbers = [5, 8, 12, 15, 20, 3, 18];
+void rectangle() {
+  Rectangle rect = Rectangle(5.0, 3.0);
 
-  print(filterNumbers(numbers, (num) => num % 2 == 0));
-
-  print(filterNumbers(numbers, (num) => num > 10));
+  print("Area: ${rect.area()}");
+  print("Perimeter: ${rect.perimeter()}"); //q2
 }
-
-  
-    
