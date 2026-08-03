@@ -1,133 +1,161 @@
-
-
-class person {
-  String  Name;
-  int age;
-  String city ;
-  person(this.Name, this. age, this.city);
-  void printInfo(){
-    print("Name:$Name");
-    print("Age:$age");
-    print("city:$city");
-    print("");
-
-  }
-}
-void main(){
-  person person1= person("Ahmed" , 23, "cairo");
-  person pesron2= person("Mariam" ,22,"Alexandria");
-  person1.printInfo();
-  pesron2.printInfo();                     //q1
-
-}
-class Rectangle {
-  double width;
-  double height;
-
-  Rectangle(this.width, this.height);
-
-  double area() {
-    return width * height;
-  }
-
-  double perimeter() {
-    return 2 * (width + height);
-  }
-}
-
-void rectangle() {
-  Rectangle rect = Rectangle(5.0, 3.0);
-
-  print("Area: ${rect.area()}");
-  print("Perimeter: ${rect.perimeter()}"); //q2
-}
-class BankAccount {
-  String owner;
-  double balance;
+class Car {
+  String brand;
+  String model;
+  int year;
 
   // Constructor
-  BankAccount(this.owner, this.balance);
+  Car(this.brand, this.model, this.year);
+
+  // Function to display car information
+  void displayInfo() {
+    print("Brand: $brand");
+    print("Model: $model");
+    print("Year: $year");
+  }
+}
+
+void main() {
+  Car car = Car("Toyota", "Corolla", 2022);
+
+  car.displayInfo();
+}//q1
+class Student {
+  String name;
+  int age;
+  int grade;
+
+  // Default Constructor
+  Student(this.name, this.age, this.grade);
 
   // Named Constructor
-  BankAccount.empty(this.owner) : balance = 0;
+  Student.guest()
+      : name = "Guest",
+        age = 0,
+        grade = 0;
 
-  void deposit(double amount) {
-    balance += amount;
-    print("Balance after deposit: $balance");
+  // Function
+  void showInfo() {
+    print("Name: $name");
+    print("Age: $age");
+    print("Grade: $grade");
   }
+}//q2
+class BankAccount {
+  double _balance = 0;
 
-  void withdraw(double amount) {
-    if (amount <= balance) {
-      balance -= amount;
-      print("Balance after withdrawal: $balance");
+  // Setter
+  set balance(double value) {
+    if (value >= 0) {
+      _balance = value;
     } else {
-      print("Insufficient balance");
+      print("Invalid balance");
     }
   }
+
+  // Getter
+  double get balance => _balance;
 }
 
 void Bank() {
-  BankAccount account = BankAccount.empty("Ahmed");
+  BankAccount account = BankAccount();
 
-  account.deposit(500);
-  account.withdraw(200);
-  account.withdraw(400); //q3
+  account.balance = 1000;
+  print("Balance: ${account.balance}");
 
-}
-class Student {
+  account.balance = -500;
+
+  print("Balance: ${account.balance}");
+}//q3
+class Animal {
   String name;
-  List<double> grades;
 
-  Student(this.name, this.grades);
+  Animal(this.name);
 
-  double average() {
-    double sum = 0;
-    for (double grade in grades) {
-      sum += grade;
-    }
-    return sum / grades.length;
-  }
-
-  String status() {
-    if (average() >= 60) {
-      return "Pass";
-    } else {
-      return "Fail";
-    }
+  void makeSound() {
+    print("Animal sound");
   }
 }
 
-void StudenT() {
-  Student student = Student("Ahmed", [80, 70, 90, 60]);
-
-  print("Name: ${student.name}");
-  print("Average: ${student.average()}");
-  print("Status: ${student.status()}");
-}
-
-class Product {
-  String name;
-  double price;
-  bool inStock;
-
-  // Main Constructor
-  Product(this.name, this.price, {this.inStock = true});
-
-  // Named Constructor
-  Product.outOfStock(this.name, this.price) : inStock = false;
+class Dog extends Animal {
+  Dog(String name) : super(name);
 
   @override
-  String toString() {
-    return "Product: $name, Price: \$${price}, In Stock: $inStock";
+  void makeSound() {
+    print("Dog: Woof!");
   }
 }
 
-void ProducT() {
-  Product product1 = Product("Laptop", 25000);
-  Product product2 = Product("Mouse", 500);
-  Product product3 = Product.outOfStock("Keyboard", 1200);
+class Cat extends Animal {
+  Cat(String name) : super(name);
 
-  print(product1);
-  print(product2);
-  print(product3);
+  @override
+  void makeSound() {
+    print("Cat: Meow!");
+  }
+}//q4
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
 }
+
+class Employee extends Person {
+  double salary;
+
+  Employee(String name, int age, this.salary) : super(name, age);
+
+  void displayInfo() {
+    print("Name: $name");
+    print("Age: $age");
+    print("Salary: $salary");
+  }
+}//q5
+class Book {
+  String title;
+  String author;
+
+  Book(this.title, this.author);
+}
+
+class BorrowedBook extends Book {
+  bool _isBorrowed = false;
+
+  BorrowedBook(String title, String author) : super(title, author);
+
+  void borrowBook() {
+    if (_isBorrowed) {
+      print("This book is already borrowed.");
+    } else {
+      _isBorrowed = true;
+      print("Borrowed successfully.");
+    }
+  }
+
+  void returnBook() {
+    if (!_isBorrowed) {
+      print("This book is already available.");
+    } else {
+      _isBorrowed = false;
+      print("Book returned successfully.");
+    }
+  }
+
+  void getStatus() {
+    print("Current Status: ${_isBorrowed ? "Borrowed" : "Available"}");
+  }
+}
+
+void book() {
+  BorrowedBook book = BorrowedBook("Flutter Basics", "John");
+
+  print("Book: ${book.title}");
+  print("Author: ${book.author}");
+  print("");
+
+  book.borrowBook();
+  book.borrowBook();
+  book.returnBook();
+  book.getStatus();
+}
+
