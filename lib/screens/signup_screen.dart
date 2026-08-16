@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/signup_screen.dart';
+
 
 class Signupscreen extends StatelessWidget {
   const Signupscreen({super.key});
@@ -11,7 +11,7 @@ class Signupscreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 22),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -26,7 +26,7 @@ class Signupscreen extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 80),
+                const SizedBox(height: 100.2),
 
                 // Sign Up
                 const Text(
