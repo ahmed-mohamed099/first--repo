@@ -1,21 +1,2 @@
-<<<<<<< HEAD
-# flutter_application_4
-=======
-# flutter_application_2
->>>>>>> da1032df927e1fc6cffc5a7486043c502969bea6
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="499" height="1002" alt="Screenshot 2026-08-16 225910" src="https://github.com/user-attachments/assets/1e9f03f4-5e69-4212-9e42-0b4b321e7bde" />
+<img width="469" height="990" alt="Screenshot 2026-08-16 225821" src="https://github.com/user-attachments/assets/1c59b0af-5a75-45be-92ab-f7bf5052676e" />
