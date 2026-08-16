@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+<<<<<<< HEAD
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -210,3 +211,5 @@ class HomeScreen extends StatelessWidget {
 }
 
 
+=======
+>>>>>>> da1032df927e1fc6cffc5a7486043c502969bea6
